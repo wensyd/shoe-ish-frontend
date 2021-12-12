@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+# Shoe-ish- Frontend - Project 4
+#### By Wensy DeSousa
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Summary
 
-## Available Scripts
+Shoe-ish is a full-stack application created using a masonite backend and react frontend. Shoe-ish will allow a user to find their most favorite shoes and add them to a collection which can be marked off as purchased making this the ultimate shoe wish app. 
 
-In the project directory, you can run:
+## Route Table
 
-### `npm start`
+List your routes in a table
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+| url | method | action |
+|-----|--------|--------|
+| /shoes | get | get all shoes (index)|
+| /shoes/:id | get | get a particular shoe (show)|
+| /shoes/new | get | return form to create a new shoe (new)|
+| / | post | get post request to /shoes, create new and redirect to index (create)|
+| /shoes/:id/edit | get | edit a particular shoe (edit)|
+| /shoes/:id | put | put request to /shoes/:id (update)|
+| /shoes/:id | delete | deletes a particular shoe (destroy)|
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## User Stories
 
-### `npm test`
+-user can view all pictures on main page (index).
+-user can select picture and it redirects to show page for that particular picture. 
+-user can edit picture, title, description of each shoe.
+-user can delete picture.
+-user can update picture.
+-user can go back to main page from show page.
+-user can create new picture/file/shoe. 
+-user can mark the shoe complete with checkbox.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## List of Technologies
 
-### `npm run build`
+-html
+-css
+-Milligram-sass
+-React
+-JS
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Wireframes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Challenges
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Challenges that came up were with the checkbox display on the main page with an icon. The checkbox was not showing the boolean values. I also had challenges when it came to displaying an if statement within the jsx. The if statement needed to be embedded within the jsx in order to display the boolean value. Once that was completed I also learned that within react every tag should be self-closing or have a closing tag. This was a challenge because the icons were not showing once the icons were embedded within the jsx, so I had to add the closing / in order for it show. I also had a challenge on with the form not saving the value given at the checkbox. This was resolved by adding checked to the form input and adding a separate handle change function which listens for when the checkbox is checked or not. Once this new handleChange function was created and updated, the checkbox was working. During this process I also learned more detail about the ternary operator and optional chaining operator. 

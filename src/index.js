@@ -1,13 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+// IMPORT SCSS FILE TO BE SOURCE OF STYLING
+import "./style.scss";
 import App from './App';
+import About from './pages/About';
 import reportWebVitals from './reportWebVitals';
+import {BrowserRouter as Router, Route} from "react-router-dom"
+import "milligram"
 
 ReactDOM.render(
+  <Router>
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+  </Router>,
   document.getElementById('root')
 );
 
